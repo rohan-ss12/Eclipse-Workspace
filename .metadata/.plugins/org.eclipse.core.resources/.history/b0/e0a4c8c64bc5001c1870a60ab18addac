@@ -1,0 +1,30 @@
+package API_Testing.API_Testing;
+
+import io.restassured.RestAssured;
+import io.restassured.http.Method;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+public class Test1 {
+	
+	static void getMethod(){
+		
+		RestAssured.baseURI = "https://uat-ebranchnxt.pnbmetlife.com/ebranch-nxt/customer-onboarding-customer-onboarding-module.js";
+		
+		RequestSpecification httpRequest = RestAssured.given();
+		
+		//response object
+		Response response = httpRequest.request(Method.GET,"");
+		
+		//print response
+		String ResponseBody = response.getBody().asPrettyString();
+		System.out.println("Response Body is : "+ResponseBody);
+		
+	}
+	
+	public static void main(String args[]){
+		
+		getMethod();
+	}
+
+}

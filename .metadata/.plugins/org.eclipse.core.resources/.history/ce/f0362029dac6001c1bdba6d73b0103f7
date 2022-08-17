@@ -1,0 +1,20 @@
+package TestNG;
+
+import org.springframework.core.annotation.Order;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.Test;
+
+import net.bytebuddy.asm.Advice.OnMethodExit;
+
+public class TestingforTEstNG {
+
+	
+	
+	@Test
+	public void getText1(){
+		System.out.println("Done1");
+	}
+	public void getText2(){
+		System.out.println("Done");
+	}
+}

@@ -1,0 +1,9 @@
+package StepDefinations;
+
+public class LoginSteps {
+	
+	public void User_in_on_Netbanking_Landing_Page() {
+		
+	}
+
+}

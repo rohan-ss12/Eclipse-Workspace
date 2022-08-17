@@ -1,0 +1,23 @@
+{
+  "name": "hdfc-securities",
+  "version": "1.0.0",
+  "description": "",
+  "main": "LoginPage_HDFC securities.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "selenium-webdriver": "^4.1.1"
+  },
+  "devDependencies": {
+    "@wdio/cli": "^7.19.1",
+    "@wdio/local-runner": "^7.19.1",
+    "@wdio/mocha-framework": "^7.19.1",
+    "@wdio/spec-reporter": "^7.19.1",
+    "chromedriver": "^99.0.0",
+    "wdio-chromedriver-service": "^7.3.2"
+  }
+}

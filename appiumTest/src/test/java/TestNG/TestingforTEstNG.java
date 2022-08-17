@@ -1,0 +1,19 @@
+package TestNG;
+
+
+import org.testng.annotations.Test;
+
+
+
+public class TestingforTEstNG {
+	
+	@Test
+	public void getText2(){
+		System.out.println("Done1");
+	}
+	
+	@Test
+	public void getText1(){
+		System.out.println("Done2");
+	}
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="44" started-at="2022-05-23T17:37:17 IST" finished-at="2022-05-23T17:37:18 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="44" started-at="2022-05-23T17:37:17 IST" finished-at="2022-05-23T17:37:18 IST">
+      <class name="hdfcSec1.hdfcSec1.StaticTestNGAnnotation">
+        <test-method status="PASS" signature="getData()[pri:0, instance:hdfcSec1.hdfcSec1.StaticTestNGAnnotation@3cb1ffe6]" name="getData" duration-ms="6" started-at="2022-05-23T17:37:18 IST" finished-at="2022-05-23T17:37:18 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getData -->
+      </class> <!-- hdfcSec1.hdfcSec1.StaticTestNGAnnotation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

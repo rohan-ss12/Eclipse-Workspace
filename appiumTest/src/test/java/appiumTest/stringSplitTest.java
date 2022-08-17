@@ -1,0 +1,15 @@
+package appiumTest;
+
+public class stringSplitTest {
+	
+	public static void main(String args[])
+    {
+        String str = "OPT - 1234-567890";
+        String[] arrOfStr = str.split("-", 3);
+ 
+//        for (String a : arrOfStr)
+//            System.out.println(a);
+        System.out.println(arrOfStr[2]);
+    }
+
+}

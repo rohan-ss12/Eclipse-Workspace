@@ -1,0 +1,20 @@
+package globalPackage;
+
+import org.testng.annotations.DataProvider;
+
+public class StaticProviderClass1 {
+	
+	
+	public String getData() {
+		
+		String s = "Its Done Bro";
+		return s;
+	}
+	
+	@DataProvider
+	public Object[][] loginDetails() {
+		
+		return new Object[][] {{getData()}};
+	}
+
+}

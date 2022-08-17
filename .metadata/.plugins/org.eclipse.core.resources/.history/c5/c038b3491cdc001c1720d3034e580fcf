@@ -1,0 +1,14 @@
+package MavenTestng.MavenTestng;
+
+import org.testng.annotations.Test;
+
+public class Post {
+	
+	@Test
+	
+	public void PostReq() {
+		
+		
+	}
+
+}

@@ -1,0 +1,18 @@
+package MavenTestng.MavenTestng;
+
+import org.testng.annotations.Test;
+import io.restassured.RestAssured;
+
+public class API_Automation {
+	
+	
+	@Test
+	public static void Test1() {
+		
+		
+		
+		
+	
+	}
+
+}

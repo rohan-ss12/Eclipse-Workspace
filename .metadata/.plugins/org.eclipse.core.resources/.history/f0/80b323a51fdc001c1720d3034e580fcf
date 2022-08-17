@@ -1,0 +1,20 @@
+package package1;
+
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+
+public class FirstAPI {
+	
+	
+	@Test
+	public void Test1() {
+		
+		RestAssured.baseURI = "https://api-c1.instazen.com/1/org/account/login/";
+		
+		RestAssured.given().body("{\"email\":\"rohan.sonawane@zensoftservices.com\",\"password\":\"%TGB^YHN&UJM8ik,\"}")
+		.post().then().log().all().assertThat().statusCode(200);
+		
+	}
+
+}

@@ -1,0 +1,14 @@
+package files;
+
+import io.restassured.path.json.JsonPath;
+
+public class ComplexJsonParse {
+	
+	public static m1() {
+		
+		JsonPath js = new JsonPath(ResponseBodies.complexJson());
+		
+		return js;
+	}
+
+}

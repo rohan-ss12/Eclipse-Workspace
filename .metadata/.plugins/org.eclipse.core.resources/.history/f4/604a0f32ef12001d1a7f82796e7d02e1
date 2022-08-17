@@ -1,0 +1,6 @@
+Feature: Login Feature
+
+Scenario: Login Scenario
+Given User is on Login Page
+When User enters the credentials
+Then User Navigated to the Home Page.

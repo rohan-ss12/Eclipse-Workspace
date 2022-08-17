@@ -1,0 +1,13 @@
+Feature: Amazon Search
+
+Scenario: Search a Product
+Given I have Search field on Amazon page
+When I search for a product with name "Apple MacBook Pro" and price is "50000"
+Then Product name with "Apple MacBook Pro" should be displayed
+
+Scenario: Buy a product
+Given I have a Product to Buy
+When I click on the Buy Now button
+Then Payment process should be initiated
+| rohan@ybl | Rohan@456 | Apple Airpods | 20000 | 
+And Payment successful message displayed

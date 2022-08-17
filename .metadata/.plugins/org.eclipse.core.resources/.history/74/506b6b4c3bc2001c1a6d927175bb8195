@@ -1,0 +1,29 @@
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.http.Method;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+public class Demo1 {
+	
+	@Test
+	void getCustomerDetails(){
+		
+		//base URI
+		RestAssured.baseURI = "https://uat-ebranchnxt.pnbmetlife.com/ebranch-nxt/customer-onboarding-customer-onboarding-module.js";
+		
+		//request object
+		RequestSpecification httpRequest = RestAssured.given();
+		
+		//response object
+		Response response = httpRequest.request(Method.GET,"");
+		
+		//print response
+		String ResponseBody = response.getBody().asPrettyString();
+		System.out.println("Response Body is : "+ResponseBody);
+	}
+	
+}
+
+

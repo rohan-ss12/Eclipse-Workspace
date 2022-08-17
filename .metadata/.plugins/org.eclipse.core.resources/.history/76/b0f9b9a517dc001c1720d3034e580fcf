@@ -1,0 +1,15 @@
+package MavenTestng.MavenTestng;
+
+import org.testng.annotations.Test;
+
+public class API_Automation {
+	
+	
+	@Test
+	public static void Test1() {
+		
+	
+	
+	}
+
+}

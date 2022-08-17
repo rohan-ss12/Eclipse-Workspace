@@ -1,0 +1,65 @@
+package stepDefinations;
+
+import java.util.List;
+
+import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class SearchSteps {
+	
+	@Given("I have Search field on Amazon page")
+	public void i_have_search_field_on_amazon_page() {
+	    // Write code here that turns the phrase above into concrete actions
+		System.out.println("Given Step is executed");
+	    
+	    
+	}
+
+	@When("I search for a product with name {string} and price is {string}")
+	public void i_search_for_a_product_with_name_and_price_is(String string, String string2) {
+		
+	    // Write code here that turns the phrase above into concrete actions
+		System.out.println("When Step "+string+" "+string2);
+	    
+	}
+
+	@Then("Product name with {string} should be displayed")
+	public void product_name_with_should_be_displayed(String string) {
+
+	}
+	
+	@Given("I have a Product to Buy")
+	public void i_have_a_product_to_buy() {
+	    // Write code here that turns the phrase above into concrete actions
+		System.out.println("I want to buy the Apple Ear Pods");
+	    
+	}
+
+	@When("I click on the Buy Now button")
+	public void i_click_on_the_buy_now_button() {
+	    // Write code here that turns the phrase above into concrete actions
+		System.out.println("I was able to click on Buy Now successfully");
+	    
+	}
+
+	@Then("Payment process should be initiated")
+	public void payment_process_should_be_initiated(DataTable Data) {
+	    // Write code here that turns the phrase above into concrete actions
+		System.out.println("Netbanking Payment method initiated");
+		List<List<String>> Info =  Data.asLists();
+		System.out.println(Info.get(0).get(1));
+		
+	    
+	}
+
+	
+	@Then("Payment successful message displayed")
+	public void payment_successful_message_displayed() {
+	    // Write code here that turns the phrase above into concrete actions
+		System.out.println("10000 Rs deducted from the Rewards Amount");
+	    
+	}
+
+}

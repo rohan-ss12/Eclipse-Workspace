@@ -1,0 +1,13 @@
+package hdfcSec1.hdfcSec1;
+
+import org.testng.annotations.Test;
+
+public class StaticTestNGAnnotation {
+	
+	@Test(dataProvider = "loginDetails",dataProviderClass=StaticProviderClass1.class)
+	public void getData(String name) {
+		
+		System.out.println(name);
+	}
+
+}

@@ -1,0 +1,32 @@
+package stepDefinations;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class SearchSteps {
+	
+	@Given("I have Search field on Amazon page")
+	public void i_have_search_field_on_amazon_page() {
+	    // Write code here that turns the phrase above into concrete actions
+		System.out.println("Given Step is executed");
+	    throw new io.cucumber.java.PendingException();
+	    
+	}
+
+	@When("I search for a product with name {string} and price is {string}")
+	public void i_search_for_a_product_with_name_and_price_is(String string, String string2) {
+		
+	    // Write code here that turns the phrase above into concrete actions
+		System.out.println("When Step "+string+" "+string2);
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Product name with {string} should be displayed")
+	public void product_name_with_should_be_displayed(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+		System.out.println("Then Step "+string);
+	    throw new io.cucumber.java.PendingException();
+	}
+
+}

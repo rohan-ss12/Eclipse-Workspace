@@ -1,0 +1,19 @@
+package MavenTestng.MavenTestng;
+
+import org.testng.annotations.Test;
+
+
+
+public class API_Automation {
+	
+	
+	@Test
+	public static void Test1() {
+		
+		RestAssured.baseURI = "https://api-c1.instazen.com/1/org/account/login/";
+		
+		RestAssured.given().body("{\"email\":\"rohan.sonawane@zensoftservices.com\",\"password\":\"%TGB^YHN&UJM8ik,\"}").post()
+		.then().log().all().assertThat().statusCode(200);
+	}
+
+}

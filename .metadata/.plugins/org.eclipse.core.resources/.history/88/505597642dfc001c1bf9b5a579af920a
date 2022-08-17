@@ -1,0 +1,129 @@
+import java.net.URL;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
+
+public class SwitchAppTest {
+	
+	static AndroidDriver<MobileElement> driver;
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println("Done");
+		setDesiredCaps();
+		loginToSmartFriend();
+
+	}
+	
+	public static void setDesiredCaps() throws Exception {
+		
+		DesiredCapabilities caps = new DesiredCapabilities();
+		caps.setCapability("udid","2b12156c481d7ece");
+		caps.setCapability("platformName","Android");
+		caps.setCapability("automationName","UiAutomator2");
+		caps.setCapability("noReset",false);
+		caps.setCapability("fullReset",true);
+		caps.setCapability("app", "D:\\QualitiaProjects\\Application Files\\Smart-Friend-Debug-V57.apk");
+		caps.setCapability("appActivity","com.pmli.smartfriend.MainActivity");
+		caps.setCapability("appPackage","com.pmli.smartfriend");
+		caps.setCapability("autoGrantPermissions", true);
+		caps.setCapability("autoAcceptAlerts", true);
+		URL url = new URL("http://127.0.0.1:4723/wd/hub/");
+		driver = new AndroidDriver<MobileElement>(url,caps);
+		
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		
+		System.out.println("Application Started");
+			
+	}
+	
+public static void fetchOTP() throws Exception{
+		
+//		MobileElement stringOTPtoSplit = driver.findElement(By.xpath("//android.view.View[contains(@text,'OTP -')]"));
+//		String OTPtoSplit = stringOTPtoSplit.getText();
+		
+		MobileElement OTP = driver.findElement(By.xpath("//android.view.View[contains(@text,'OTP -')]"));
+		OTP.click();
+		String OTPText = OTP.getText();
+		String finalOTP = SplitOTP(OTPText);
+
+		System.out.println(finalOTP);
+		char[] arr = new char [finalOTP.length()];
+		
+		for (int i=0;i<finalOTP.length();i++) {
+			arr[i] = finalOTP.charAt(i);
+			String s = Character.toString(arr[i]);
+			MobileElement OTPset = driver.findElement(By.xpath("//android.widget.EditText[@index=("+i+")]"));
+			OTPset.sendKeys(s);
+		}
+		MobileElement Submit = driver.findElement(By.xpath("//android.widget.Button[contains(@text,'SUBMIT')]"));
+		Submit.click();
+		
+	}
+	
+	public static String SplitOTP(String OTPText) throws Exception {
+
+		String str = OTPText;
+		String[] arrOfStr = str.split("-", 3);
+
+
+
+		// for (String a : arrOfStr)
+		// System.out.println(a);
+		System.out.println(arrOfStr[2]);
+
+		return(arrOfStr[2]);
+
+
+	}
+	
+	public static void loginToSmartFriend() throws Exception{		
+		
+		MobileElement loginID = driver.findElement(By.xpath("//android.widget.EditText[@resource-id='mat-input-0']"));
+		loginID.sendKeys("1039997");
+		
+		MobileElement password = driver.findElement(By.xpath("//android.widget.EditText[@resource-id='mat-input-1']"));
+		password.sendKeys("Metlife_1");
+
+		MobileElement signInButton = driver.findElement(By.xpath("//android.widget.Button[contains(@text,'SIGN IN')]"));
+		signInButton.click();
+		
+		System.out.println("Logged in successfully");
+		
+//		fetchOTP();
+		
+		Thread.sleep(30000);
+		
+		MobileElement eBranchButton = driver.findElement(By.xpath("//android.widget.Image[contains(@text,'ebranchnxt')]"));
+		eBranchButton.click();
+		
+		System.out.println("Launched the ebranch NXT app");
+		
+		Thread.sleep(5000);
+		
+		Set<String> contextNames = driver.getContextHandles();
+//		String webView = (String) contextNames.toArray()[1];
+		
+		System.out.println(contextNames);
+		
+		driver.context("NATIVE_APP");
+
+		Thread.sleep(10000);
+		MobileElement createQuote = driver.findElement(By.xpath("//android.widget.TextView[contains(@text,'WELCOME TO eBRANCH NXT')]"));
+		createQuote.click();
+		
+		System.out.println("Apps got switched successfully");
+		
+		
+		Thread.sleep(1000);
+	}
+
+
+
+
+}
