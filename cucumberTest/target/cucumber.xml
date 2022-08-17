@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="5" time="0.425">
+    <testcase classname="Login Feature" name="Login with valid credentials" time="0.089">
+        <system-out><![CDATA[Given UserId is "UserOne" and Password is "P@$$w0rd"........................passed
+When User enters above credetials...........................................passed
+Then User will be able to login.............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login Feature" name="Login with Multiple credentials" time="0.004">
+        <system-out><![CDATA[Given Username is User1 and passkey is Pass1................................passed
+When customer enters the above values.......................................passed
+Then customer is able to login to the application...........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login Feature" name="Login with Multiple credentials 2" time="0.003">
+        <system-out><![CDATA[Given Username is User2 and passkey is Pass2................................passed
+When customer enters the above values.......................................passed
+Then customer is able to login to the application...........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login Feature" name="Login with Multiple credentials 3" time="0.005">
+        <system-out><![CDATA[Given Username is User3 and passkey is Pass3................................passed
+When customer enters the above values.......................................passed
+Then customer is able to login to the application...........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login Feature" name="Login with Multiple credentials 4" time="0.006">
+        <system-out><![CDATA[Given Username is User4 and passkey is Pass4................................passed
+When customer enters the above values.......................................passed
+Then customer is able to login to the application...........................passed
+]]></system-out>
+    </testcase>
+</testsuite>

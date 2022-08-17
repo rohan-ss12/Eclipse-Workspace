@@ -59,6 +59,7 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="seleniumCucumber.SeleniumWebProject"/>
 			<item value="cucumberTest.cucumberTest"/>
 			<item value="cucumber1.cucumber1"/>
 			<item value="ResReq.cucumber2"/>
@@ -66,12 +67,14 @@
 			<item value="Cucumber.Cucumber"/>
 		</list>
 		<list key="groupId">
+			<item value="seleniumCucumber"/>
 			<item value="cucumberTest"/>
 			<item value="cucumber1"/>
 			<item value="ResReq"/>
 			<item value="Cucumber"/>
 		</list>
 		<list key="artifactId">
+			<item value="SeleniumWebProject"/>
 			<item value="cucumberTest"/>
 			<item value="cucumber1"/>
 			<item value="cucumber2"/>

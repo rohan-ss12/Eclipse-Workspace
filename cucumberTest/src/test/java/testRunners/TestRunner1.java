@@ -9,8 +9,9 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = "src/test/java/featureFiles",
 		glue = "stepDefinations",
-		tags = "@RegressionTest",
-		stepNotifications = true
+		monochrome = true,
+		stepNotifications = true,
+		plugin = {"pretty","html:target/cucumber.html","json:target/cucumber.json", "junit:target/cucumber.xml"}
 		)
 public class TestRunner1 {
 
